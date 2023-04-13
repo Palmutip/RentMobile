@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:RentMobile"
+             x:Class="RentMobile.MasterPage">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <StackLayout BackgroundColor="White">
+                <StackLayout BackgroundColor="#E29E2B">
+                    <StackLayout BackgroundColor="Transparent" Orientation="Horizontal" Padding="0,48,0,0">
+                        <Button ImageSource="" BackgroundColor="Transparent" Text="" x:Name="imagemPerfil" CornerRadius="100" />
+                        <StackLayout BackgroundColor="Transparent" Orientation="Vertical" VerticalOptions="Center">
+                            <Label TextColor="#071F41" Text="Olá," VerticalOptions="Center" />
+                            <Label TextColor="#071F41" Text="Olá," FontAttributes="Bold" VerticalOptions="Center" x:Name="nomeUsuario" />
+                        </StackLayout>
+                    </StackLayout>
+                    <Label TextColor="#071F41" x:Name="mensagem" HorizontalOptions="Start" Margin="32,16,0,16"/>
+                </StackLayout>
+                <StackLayout Spacing="0" HorizontalOptions="FillAndExpand">
+                    <Button ImageSource="drawable/Entrar.png" BackgroundColor="White" TextColor="#071F41" Text="     Entrar" Clicked="Entrar" x:Name="entrar" HorizontalOptions="Start" Padding="32,0,0,0"/>
+                    <Button ImageSource="drawable/user.png" BackgroundColor="White" TextColor="#071F41" Text="     Perfil" Clicked="GoPerfil" x:Name="perfil" HorizontalOptions="StartAndExpand" Padding="32,0,0,0"/>
+                    <Button ImageSource="drawable/Home.png" BackgroundColor="White" TextColor="#071F41" Text="     Home"  Clicked="GoHome" HorizontalOptions="StartAndExpand" Padding="32,0,0,0"></Button>
+                    <Button ImageSource="drawable/cart.png" BackgroundColor="White" TextColor="#071F41" Text="     Carrinho"  Clicked="GoCarrinho" HorizontalOptions="StartAndExpand" Padding="32,0,0,0"></Button>
+                    <!--Button ImageSource="drawable/cogs.png" BackgroundColor="White" TextColor="#071F41" Text="     Configuracoes"  Clicked="GoConfiguracoes" HorizontalOptions="StartAndExpand"  Padding="32,0,0,0"></Button-->
+                    <Button ImageSource="drawable/exit.png" BackgroundColor="White" TextColor="#071F41" Text="    Sair"  Clicked="Sair" x:Name="sair" HorizontalOptions="StartAndExpand"  Padding="32,0,0,0"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+</FlyoutPage>

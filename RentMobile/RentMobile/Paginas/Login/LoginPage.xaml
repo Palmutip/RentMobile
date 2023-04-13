@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RentMobile"
+             x:Class="RentMobile.LoginPage"
+             BackgroundColor="{StaticResource Primaria03}"
+             NavigationPage.HasNavigationBar="False" 
+             Title="Loguin">
+    <AbsoluteLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="32,0,32,0">
+
+            <!-- Place new controls here -->
+            <StackLayout VerticalOptions="End" Margin="0,40,0,0">
+                <Image Source="drawable/Logo.png" Margin="0,0,0,24"></Image>
+                <Frame
+                   Padding = "16,0,0,0"
+                   CornerRadius     ="8"
+                   IsClippedToBounds="true"
+                    BorderColor="{StaticResource Primaria02}"
+                    BackgroundColor="#10D9D9D9">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="16" />
+                            <ColumnDefinition Width="8*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="drawable/mail.png" />
+                        <local:EntryPadrao Grid.Column="1" x:Name="EntryEmail" Placeholder="E-mail" PlaceholderColor="#7FFFFFFF" TextColor="White" Opacity="1" TextChanged="EntryEmail_TextChanged"></local:EntryPadrao>
+                    </Grid>
+                </Frame>
+                <Frame
+                Padding = "16,0,0,0"
+                CornerRadius     ="8"
+                BorderColor="{StaticResource Primaria02}"
+                IsClippedToBounds="true"
+                BackgroundColor="#10D9D9D9">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="16" />
+                            <ColumnDefinition Width="8*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="drawable/lock.png" />
+                        <local:EntryPadrao IsPassword="True" Grid.Column="1" x:Name="EntrySenha" Placeholder="Senha" PlaceholderColor="#7FFFFFFF"  TextColor="White" Opacity="1"></local:EntryPadrao>
+                    </Grid>
+                </Frame>
+                <Label Text="Esqueci minha senha" TextColor="{StaticResource Secundaria01}" HorizontalOptions="EndAndExpand" Margin="0,0,0,24"></Label>
+                <Label TextColor="Red" x:Name="RetornoLogin" IsVisible="False"/>
+
+                <Button HeightRequest="40" CornerRadius="8" Text="Entrar"  Style="{StaticResource Botao}" BackgroundColor="{StaticResource Secundaria01}" TextColor="#071F41" Clicked="ValidarCredenciais" Padding="0" Margin="0,0,0,16"></Button>
+                <Label Text="________________________________________" TextColor="#7FFFFFFF" HorizontalOptions="CenterAndExpand" Margin="0,0,0,16"></Label>
+                <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,16">
+                    <Button Padding="20,0,20,0" WidthRequest="130" CornerRadius="8" ImageSource="drawable/google.png" Text="Google" Style="{StaticResource Botao}"  BackgroundColor="#DD4B39" TextColor="White"></Button>
+                    <Button Padding="20,0,20,0" Margin="10,0,0,0" WidthRequest="130" CornerRadius="8" ImageSource="drawable/facebook.png" Text="Facebook" BackgroundColor="#3E5C9A" TextColor="White"></Button>
+                </StackLayout>
+
+            </StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Label VerticalOptions="Center" Text="Não possui uma conta?" TextColor="{StaticResource Secundaria01}">
+                </Label>
+                <Label Text="Crie uma conta." FontAttributes="Bold" TextColor="{StaticResource Secundaria01}" HorizontalOptions="CenterAndExpand">
+                </Label>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped"/>
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+        </StackLayout>
+
+        <ActivityIndicator Style="{StaticResource ActivityIndicator}" x:Name="load" />
+    </AbsoluteLayout>
+</ContentPage>

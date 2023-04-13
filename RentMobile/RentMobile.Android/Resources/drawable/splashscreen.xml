@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RentMobile.Splash"
+    android:background="#071F41">
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImageView1"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

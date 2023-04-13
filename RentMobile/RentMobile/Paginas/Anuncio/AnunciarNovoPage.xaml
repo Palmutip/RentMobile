@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.AnunciarNovoPage"
+             xmlns:local="clr-namespace:RentMobile"
+             BackgroundColor="{StaticResource Primaria03}" 
+             NavigationPage.HasNavigationBar="False" 
+             xmlns:menu="clr-namespace:RentMobile.View"
+             Title="Anunciar Produto">
+    
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1.0,1.0" >
+                <StackLayout Spacing="16" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Padding="20,0,20,0">
+            <menu:Menu/>
+                <ScrollView Orientation="Horizontal" >
+                    <StackLayout x:Name="StackImagens" Orientation="Horizontal" >
+                        <Image VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Source="drawable/InserirImagem.png" x:Name="InserirImagem">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="InserirImagemClick" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                </ScrollView>
+                <Label Text="* Necessario cinco fotos" x:Name="retornoFotos"  Style="{StaticResource LabelMensagem}"/>
+
+                <StackLayout Spacing="16">
+                <Frame
+                   Padding = "16,0,0,0"
+                   CornerRadius     ="8"
+                   IsClippedToBounds="true"
+                    BorderColor="{StaticResource Primaria02}"
+                    BackgroundColor="#10D9D9D9">
+                    <local:EditorBorderless Placeholder="Nome do anúncio" PlaceholderColor="#7FFFFFFF" TextColor="White" Opacity="1" x:Name="nomeAnuncio"></local:EditorBorderless>
+                </Frame>
+                    <Label Text="* Informe Um Nome" x:Name="retornoNomeAnuncio"  Style="{StaticResource LabelMensagem}"/>
+                <Frame
+                   Padding = "16,0,0,48"
+                   CornerRadius     ="8"
+                   IsClippedToBounds="true"
+                    BorderColor="{StaticResource Primaria02}"
+                    BackgroundColor="#10D9D9D9">
+                    <local:EntryPadrao Placeholder="Descrição do produto" PlaceholderColor="#7FFFFFFF" TextColor="White" Opacity="1" x:Name="descricaoAnuncio"></local:EntryPadrao>
+                </Frame>
+                    <Label Text="* Informe um descrição" x:Name="retornoDesricaoAnuncio"  Style="{StaticResource LabelMensagem}"/>
+                <StackLayout Margin="0,16" Padding="0,-16" VerticalOptions="FillAndExpand">
+                    <Frame Style="{StaticResource FrameEntryPiker}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <StackLayout Orientation="Horizontal" Padding="0,0,16,0" HorizontalOptions="EndAndExpand">
+                            <Image  Source="drawable/Vector.png" />
+                        </StackLayout>
+                        <local:PikerPadrao  BackgroundColor="Transparent" Title="Selecione a categoria do produto" Style="{StaticResource PickerPadrao}" x:Name="catergoriaAnuncio">
+                            <Picker.Items>
+                                <x:String>Casa, Móveis e Decoração</x:String>
+                                <x:String>Eletrônicos, Áudio e Vídeo</x:String>
+                                <x:String>Ferramentas em geral</x:String>
+                                <x:String>Informática</x:String>
+                                <x:String>Outros</x:String>
+                            </Picker.Items>
+                        </local:PikerPadrao>
+                    </Grid>
+                </Frame>
+                </StackLayout>
+                    <Label Text="* Selecione uma categoria" x:Name="retornoCatergoriaAnuncio"  Style="{StaticResource LabelMensagem}"/>
+                <Label Margin="0,0,0,0" Text="O produto apresenta algum defeito ?" TextColor="#FFFFFF"></Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
+                        <Button BackgroundColor="Transparent" TextColor="{StaticResource Secundaria01}" BorderColor="{StaticResource Secundaria01}" BorderWidth="1" CornerRadius="8" Text="Sim" x:Name="btnProdDefeitoSim" ></Button>
+                        <Button BackgroundColor="Transparent" TextColor="#FFFFFF" BorderColor="#FFFFFF" BorderWidth="1" CornerRadius="8" Text="Não" x:Name="btnProdDefeitoNao"/>
+                    </StackLayout>
+                    <Frame
+                   Padding = "16,0,0,48"
+                   CornerRadius     ="8"
+                   IsClippedToBounds="true"
+                    BorderColor="{StaticResource Primaria02}"
+                    BackgroundColor="#10D9D9D9" x:Name="frameDetalheProduto">
+                        <local:EditorBorderless Placeholder="Dê os principais detalhes do seu produto" PlaceholderColor="#7FFFFFFF" TextColor="White" Opacity="1" x:Name="detalheProduto"></local:EditorBorderless>
+                    </Frame>
+                    <Label Text="* Informe os detalhes" x:Name="retornoDetalheProduto"  Style="{StaticResource LabelMensagem}"/>
+                    
+                    <Label Margin="0,0,0,0" Text="Selecione o tempo do aluguel" TextColor="#FFFFFF"></Label>
+                    <StackLayout>
+                                <Frame Style="{StaticResource FrameEntryPiker}" HorizontalOptions="FillAndExpand" WidthRequest="50">
+                                    <Grid>
+                                        <StackLayout Orientation="Horizontal" Padding="0,0,10,0" HorizontalOptions="EndAndExpand">
+                                            <Image  Source="drawable/Vector.png" />
+                                        </StackLayout>
+                                        <local:PikerPadrao  Title="Meses" WidthRequest="94" HeightRequest="33" Style="{StaticResource PickerPadrao}" x:Name="tempoMesAnuncio"/>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" >
+                            <Frame Style="{StaticResource FrameEntryPiker}" HorizontalOptions="FillAndExpand" WidthRequest="50">
+                                <Grid>
+                                    <StackLayout Orientation="Horizontal" Padding="0,0,10,0" HorizontalOptions="EndAndExpand">
+                                        <Image  Source="drawable/Vector.png" />
+                                    </StackLayout>
+                                    <local:PikerPadrao  Title="Dias" WidthRequest="79" HeightRequest="33" Style="{StaticResource PickerPadrao}" x:Name="tempoDiaAnuncio"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    <Label Text="* Informe um perido valido" x:Name="retornoTempoAluguel"  Style="{StaticResource LabelMensagem}"/>
+                    <Frame
+                   Padding = "16,0,0,0"
+                   CornerRadius     ="8"
+                   IsClippedToBounds="true"
+                    BorderColor="{StaticResource Primaria02}"
+                    BackgroundColor="#10D9D9D9">
+                    <local:EditorBorderless Placeholder="Digite o valor do produto anunciado" PlaceholderColor="#7FFFFFFF" TextColor="White" Opacity="1" Keyboard="Numeric" x:Name="valorAnuncio"></local:EditorBorderless>
+                </Frame>
+                    <Label x:Name="retornoValorAnuncio"  Style="{StaticResource LabelMensagem}"/>
+
+                    <Label x:Name="retornoMensagem"  Style="{StaticResource LabelMensagem}"/>
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,0" Spacing="20">
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Voltar" CornerRadius="8" Style="{StaticResource BotaoVoltar}" x:Name="BtnRetornar"/>
+                        </Frame>
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Avançar" Style="{StaticResource BotaoAvancar}" x:Name="BtnAvancar"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+        </StackLayout>
+            </ScrollView>
+            <ActivityIndicator Style="{StaticResource ActivityIndicator}" x:Name="load" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

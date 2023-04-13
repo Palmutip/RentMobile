@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.NaoConfirmadaPage"
+             BackgroundColor="{StaticResource Primaria03}">
+    <ContentPage.Content>
+        <StackLayout Spacing="25" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="50,0,50,0">
+            <Label TextColor="#F5F5F5" FontSize="15" Text="Ops... Parece que você ainda não confirmou seu e-mail." FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+            <Image Source="drawable/Sad.png"></Image>
+            <Button FontSize="15" CornerRadius="30" TextColor="#071F41" Text="Enviar Novamente" BackgroundColor="#E29E2B" Clicked="Button_Clicked"></Button>
+            <Button FontSize="15" Text="Voltar" BackgroundColor="#A3A3A3" TextColor="#071F41" CornerRadius="30"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

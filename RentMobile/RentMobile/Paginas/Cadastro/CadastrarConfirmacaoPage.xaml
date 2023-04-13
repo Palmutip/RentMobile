@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.CadastrarConfirmacaoPage"
+             BackgroundColor="{StaticResource Primaria03}"
+             xmlns:menu="clr-namespace:RentMobile.View"
+             NavigationPage.HasNavigationBar="False"
+             Title="Confirmação Cadastro">
+    <ContentPage.Content>
+        <AbsoluteLayout  >
+            <ScrollView  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1.0,1.0" >
+                <StackLayout  Spacing="16" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Padding="20,0,20,0">
+                    <menu:Menu/>
+                    <Label Margin="50,75,70,75" TextColor="White" HorizontalTextAlignment="Center" Text="Para finalizar o seu cadastro, digite no campo abaixo o código de verificação que enviamos no seu E-mail"></Label>
+
+                    <StackLayout HorizontalOptions="CenterAndExpand"  Orientation="Horizontal">
+                        <Entry MaxLength="1" x:Name="Cod1" TextChanged="ProximoCampo" ClassId="1" TextColor="White" HorizontalTextAlignment="Center" WidthRequest="50"></Entry>
+                        <Entry MaxLength="1" x:Name="Cod2" TextChanged="ProximoCampo" ClassId="2" TextColor="White" HorizontalTextAlignment="Center" WidthRequest="50"></Entry>
+                        <Entry MaxLength="1" x:Name="Cod3" TextChanged="ProximoCampo" ClassId="3" TextColor="White" HorizontalTextAlignment="Center" WidthRequest="50"></Entry>
+                        <Entry MaxLength="1" x:Name="Cod4" TextChanged="ProximoCampo" ClassId="4" TextColor="White" HorizontalTextAlignment="Center" WidthRequest="50"></Entry>
+                        <Entry MaxLength="1" x:Name="Cod5" TextChanged="ProximoCampo" ClassId="5" TextColor="White" HorizontalTextAlignment="Center" WidthRequest="50"></Entry>
+                    </StackLayout>
+
+                    <!--Button Text="Verificar" Style="{StaticResource BotaoTirarFoto}" ></Button-->
+
+                    <Label Text="* Codigo Invalido" x:Name="retornoMensagem"  Style="{StaticResource LabelMensagem}"/>
+                    
+                    <StackLayout Orientation="Horizontal"  Spacing="20">
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Voltar" Clicked="Retorna" CornerRadius="8" Style="{StaticResource BotaoVoltar}"/>
+                        </Frame>
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Confirmar" Clicked="ConfirmarAvancar"  Style="{StaticResource BotaoAvancar}"/>
+                        </Frame>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator Style="{StaticResource ActivityIndicator}" x:Name="load" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

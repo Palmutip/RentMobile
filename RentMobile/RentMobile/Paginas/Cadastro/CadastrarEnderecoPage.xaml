@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="RentMobile.CadastrarEnderecoPage"
+             xmlns:local="clr-namespace:RentMobile"
+             BackgroundColor="{StaticResource Primaria03}"
+             xmlns:menu="clr-namespace:RentMobile.View"
+             NavigationPage.HasNavigationBar="False"
+             Title="Cadastro Endereco"> 
+    <ContentPage.Content>
+        <AbsoluteLayout  >            
+            <ScrollView  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1.0,1.0" >
+
+                <StackLayout  Spacing="16" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Padding="20,0,20,0">
+                    <menu:Menu/>
+                    <Grid Margin="0,10,0,14.5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal" >
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <BoxView Color="#11AC4F" HeightRequest="2"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <BoxView  Color="#FFFFFF"  HeightRequest="2"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" >
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Image BackgroundColor="{StaticResource Primaria03}" Source="drawable/CadastroEndereco1.png"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Image BackgroundColor="{StaticResource Primaria03}" Source="drawable/CadastroEndereco2.png"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                <Image BackgroundColor="{StaticResource Primaria03}" Source="drawable/CadastroEndereco3.png"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+
+                    <Frame Style="{StaticResource FrameEntryPadrao}">
+                        <local:EntryPadrao x:Name="cep" Placeholder="CEP" Keyboard="Numeric"  TextChanged="ValidaBuscarCep" Completed="ValidaCep" Style="{StaticResource EntryPadrao}">
+                            <local:EntryPadrao.Behaviors>
+                                <xct:MaskedBehavior 
+                                    Mask="99999-999" 
+                                    UnMaskedCharacter="9"
+                                />
+                            </local:EntryPadrao.Behaviors>
+                        </local:EntryPadrao>
+                    </Frame>
+                    <Label Text="* CEP INVALIDO" x:Name="cepMensagem"  Style="{StaticResource LabelMensagem}"/>
+
+                    <StackLayout HorizontalOptions="FillAndExpand" >
+                        <Frame Style="{StaticResource FrameEntryPadrao}" HorizontalOptions="FillAndExpand" WidthRequest="50">
+                            <Grid>
+                                <StackLayout Orientation="Horizontal" Padding="0,0,10,0" HorizontalOptions="EndAndExpand">
+                                    <Image  Source="drawable/Vector.png" />
+                                </StackLayout>
+                                <local:PikerPadrao x:Name="estado" Title="Estado" Style="{StaticResource PickerPadraoAzul}">
+                                    <Picker.Items>
+                                        <x:String>AC</x:String>
+                                        <x:String>AL</x:String>
+                                        <x:String>AP</x:String>
+                                        <x:String>AM</x:String>
+                                        <x:String>BA</x:String>
+                                        <x:String>CE</x:String>
+                                        <x:String>DF</x:String>
+                                        <x:String>ES</x:String>
+                                        <x:String>GO</x:String>
+                                        <x:String>MA</x:String>
+                                        <x:String>MT</x:String>
+                                        <x:String>MS</x:String>
+                                        <x:String>MG</x:String>
+                                        <x:String>PA</x:String>
+                                        <x:String>PB</x:String>
+                                        <x:String>PR</x:String>
+                                        <x:String>PE</x:String>
+                                        <x:String>PI</x:String>
+                                        <x:String>RJ</x:String>
+                                        <x:String>RN</x:String>
+                                        <x:String>RS</x:String>
+                                        <x:String>RR</x:String>
+                                        <x:String>SC</x:String>
+                                        <x:String>SP</x:String>
+                                        <x:String>SE</x:String>
+                                        <x:String>TO</x:String>
+                                    </Picker.Items>
+                                </local:PikerPadrao>
+                            </Grid>
+                        </Frame>
+                        <Label Text="*SELECIONE UMA OPÇÃO" x:Name="estadoMensagem" Style="{StaticResource LabelMensagem}"/>
+                    </StackLayout>
+
+                    <Frame Style="{StaticResource FrameEntryPadrao}">
+                        <local:EntryPadrao x:Name="cidade" Placeholder="Cidade" Style="{StaticResource EntryPadrao}"/>
+                    </Frame>
+                    <Label Text="* CIDADE INVALIDA" x:Name="cidadeMensagem"  Style="{StaticResource LabelMensagem}"/>
+
+                    <Frame Style="{StaticResource FrameEntryPadrao}">
+                        <local:EntryPadrao x:Name="logradouro" Placeholder="Rua/Avenida" Style="{StaticResource EntryPadrao}"/>
+                    </Frame>
+                    <Label Text="* RUA/AVENIDA INVALIDO" x:Name="logradouroMensagem"  Style="{StaticResource LabelMensagem}"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="20">
+                        <Frame Style="{StaticResource FrameEntryPadrao}" HorizontalOptions="FillAndExpand" WidthRequest="80">
+                            <local:EntryPadrao x:Name="bairro" Placeholder="Bairro" Style="{StaticResource EntryPadrao}"/>
+                        </Frame>
+                        <Label Text="* BAIRRO INVALIDO" x:Name="bairroMensagem"  Style="{StaticResource LabelMensagem}"/>
+
+                        <Frame Style="{StaticResource FrameEntryPadrao}" HorizontalOptions="FillAndExpand"  WidthRequest="20">
+                            <local:EntryPadrao x:Name="numero" Placeholder="Numero" Style="{StaticResource EntryPadrao}"/>
+                        </Frame>
+                        <Label Text="* NUMERO INVALIDO" x:Name="numeroMensagem"  Style="{StaticResource LabelMensagem}"/>
+                    </StackLayout>
+
+                    <Frame Style="{StaticResource FrameEntryPadrao}" HorizontalOptions="FillAndExpand"  WidthRequest="20">
+                        <local:EntryPadrao x:Name="complemento" Placeholder="Complemento" Style="{StaticResource EntryPadrao}"/>
+                    </Frame>
+                    <Label Text="* COMPLEMENTO INVALIDO" x:Name="complementoMensagem"  Style="{StaticResource LabelMensagem}"/>
+                    
+                    <Label Text="" x:Name="retornoMensagem"  Style="{StaticResource LabelMensagem}"/>
+                    
+                    <StackLayout Orientation="Horizontal" Margin="0,14,0,0" Spacing="20">
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Voltar" Clicked="Retorna" CornerRadius="8" Style="{StaticResource BotaoVoltar}"/>
+                        </Frame>
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Avançar" Clicked="AvancaCadastroDocumento"  Style="{StaticResource BotaoAvancar}"/>
+                        </Frame>
+                    </StackLayout>
+
+                </StackLayout>
+
+           
+        </ScrollView>
+            <ActivityIndicator Style="{StaticResource ActivityIndicator}" x:Name="load" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

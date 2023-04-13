@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.CadastrarDocumentoPage"
+             BackgroundColor="{StaticResource Primaria03}"
+             xmlns:menu="clr-namespace:RentMobile.View"
+             NavigationPage.HasNavigationBar="False"
+             Title="Cadatro Documento">
+    <ContentPage.Content>
+        <AbsoluteLayout  >
+            <ActivityIndicator Style="{StaticResource ActivityIndicator}" x:Name="load" />
+            <ScrollView  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1.0,1.0" >
+                <StackLayout  Spacing="16" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Padding="20,0,20,0">
+                    <menu:Menu/>
+                    <Grid Margin="0,10,0,14.5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout VerticalOptions="Center">
+                            <BoxView Color="#11AC4F" HeightRequest="2"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" >
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Image BackgroundColor="{StaticResource Primaria03}" Source="drawable/CadastroDocumento1.png"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Image BackgroundColor="{StaticResource Primaria03}" Source="drawable/CadastroDocumento2.png"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                <Image BackgroundColor="{StaticResource Primaria03}" Source="drawable/CadastroDocumento3.png"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+
+                    <Label Text="Para a próxima etapa, precisaremos de uma foto sua segurando seu documento (RG ou CNH)" 
+                   HorizontalTextAlignment="Center" TextColor="#F5F5F5" Font="Inter" FontSize="15"></Label>
+
+                    <Image Source="drawable/AvatarDocumento.png" x:Name="ImagemUsuario" ></Image>
+                    <!--Button Text="Tirar Foto" BackgroundColor="#11AC4F"  HeightRequest="28"  BorderRadius="18"></Button-->
+
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Button Text="Tirar foto" Clicked="TirarFoto" CornerRadius="8" Style="{StaticResource BotaoTirarFoto}"/>
+                    </StackLayout>
+                    
+                    <Label Text="* Tire a foto" x:Name="retornoMensagem"  Style="{StaticResource LabelMensagem}"/>
+                    
+                    <StackLayout Orientation="Horizontal"  Spacing="20">
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Voltar" Clicked="Retorna" CornerRadius="8" Style="{StaticResource BotaoVoltar}"/>
+                        </Frame>
+                        <Frame Padding ="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Button Text="Avançar" Clicked="AvancaCadastroConfirmacao"  Style="{StaticResource BotaoAvancar}"/>
+                        </Frame>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </ScrollView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:master="RentMobile.HomePage" 
+             xmlns:local="clr-namespace:RentMobile"
+             xmlns:menu="clr-namespace:RentMobile.View"
+             x:Class="RentMobile.HomePage"
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="{StaticResource Primaria03}">
+    <ScrollView>
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Spacing="0" Padding="32,0,32,0">
+            <menu:Menu x:Name="ViewMenu"/>
+            <menu:SearchView/>
+
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Image Source="drawable/BannerNovidades.png"></Image>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Opções" FontSize="14" TextColor="#F5F5F5" Margin="0,24,0,16"/>
+                <StackLayout Orientation="Horizontal"  Spacing="24"  Margin="0"  >
+                    <Image Source="drawable/Alugar.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="drawable/Anunciar.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MostraAnunciarOpcoes"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="24" Margin="0,24">
+                    <Image Source="drawable/Favoritos.png"></Image>
+                    <Image Source="drawable/Suporte.png"></Image>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

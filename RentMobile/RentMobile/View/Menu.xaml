@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.View.Menu">
+  <ContentView.Content>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,20,0,10">
+            <ImageButton x:Name="btnMenuCustom" HorizontalOptions="Start" Source="drawable/hamburguer.png" BackgroundColor="Transparent"></ImageButton>
+
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="drawable/map.png"></Image>
+                <Label HorizontalOptions="CenterAndExpand" VerticalOptions="Center" x:Name="LblEndereco" x:FieldModifier="Public" Text="" FontSize="14" TextColor="#F5F5F5"></Label>
+            </StackLayout>
+            
+            <ImageButton HorizontalOptions="End" Source="drawble/shopping.png" BackgroundColor="Transparent"></ImageButton>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

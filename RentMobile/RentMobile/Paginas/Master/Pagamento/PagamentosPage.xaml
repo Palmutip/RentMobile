@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.Paginas.Master.Pagamento.PagamentosPage"
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="{StaticResource Primaria03}">
+    <ContentPage.Content>
+        <StackLayout Spacing="0" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Padding="32,64,32,0">
+            <StackLayout Spacing="16">
+            <Label Text="Pagamentos" FontSize="16" TextColor="#FFFFFF" HorizontalOptions="Center" Padding="0,0,0,24"></Label>
+            <Frame Padding="1,1,1,1">
+                <Frame BackgroundColor="{StaticResource Primaria03}" >
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Label TextColor="#FFFFFF" Text="Pagamentos" FontAttributes="Bold"></Label>
+                        <StackLayout Orientation="Horizontal">
+                    <Image Source="drawable/creditCard.png"></Image>
+                            <Label Text="xxx.xxxx.xx.x.x" TextColor="#FFFFFF"></Label>
+                        </StackLayout>
+                        </StackLayout>
+                            <Image Source="drawable/Visa.png"></Image>
+                        </StackLayout>
+                </Frame>
+            </Frame>
+            <Frame Padding="1,1,1,1">
+                <Frame BackgroundColor="{StaticResource Primaria03}" >
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label TextColor="#FFFFFF" Text="Reserva" FontAttributes="Bold"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="drawable/creditCard.png"></Image>
+                                <Label Text="xxx.xxxx.xx.x.x" TextColor="#FFFFFF"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                            <Image Source="drawable/Mastercard.png"></Image>
+                        </StackLayout>
+                </Frame>
+            </Frame>
+            </StackLayout>
+            <StackLayout Spacing="24" Padding="0,24,0,0">
+                <Button Text="Adicionar outro cartão" Style="{StaticResource BotaoAdicionarCartao}" ></Button>
+                <Button Text="Remover" Style="{StaticResource BotaoRemoverCartao}" ></Button>
+            <Button Text="Voltar" Style="{StaticResource BotaoVoltar}" ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

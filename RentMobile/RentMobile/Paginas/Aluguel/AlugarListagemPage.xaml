@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.AlugarListagemPage"
+             xmlns:menu="clr-namespace:RentMobile.View"
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="{StaticResource Primaria03}">
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Spacing="0" Padding="32,64,32,64">
+                <menu:Menu/>
+                <menu:SearchView/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Feito para você" TextColor="#FFFFFF" HorizontalOptions="FillAndExpand"></Label>
+                    <Image Source="drawable/gridWhite.png"></Image>
+                    <Image Source="drawable/blockOrange.png"></Image>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="0,32,0,0">
+                    <ScrollView Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <Button BackgroundColor="Transparent" TextColor="{StaticResource Secundaria01}" BorderColor="{StaticResource Secundaria01}" BorderWidth="1" CornerRadius="8" Text="Todos" ></Button>
+                            <Button BackgroundColor="Transparent" TextColor="#FFFFFF" BorderColor="#FFFFFF" BorderWidth="1" CornerRadius="8" Text="Decoração"/>
+                            <Button BackgroundColor="Transparent" TextColor="#FFFFFF" BorderColor="#FFFFFF" BorderWidth="1" CornerRadius="8" Text="Eletrônicos"/>
+                            <Button BackgroundColor="Transparent" TextColor="#FFFFFF" BorderColor="#FFFFFF" BorderWidth="1" CornerRadius="8" Text="Ferramentas"/>
+                            <Button BackgroundColor="Transparent" TextColor="#FFFFFF" BorderColor="#FFFFFF" BorderWidth="1" CornerRadius="8" Text="Informática"/>
+                            <Button BackgroundColor="Transparent" TextColor="#FFFFFF" BorderColor="#FFFFFF" BorderWidth="1" CornerRadius="8" Text="Outros" x:Name="Outros" Clicked="Outros_Clicked"/>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="Start">
+                    
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

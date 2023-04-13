@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.Paginas.PerfilPage"
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="{StaticResource Primaria03}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="32,64,32,0">
+                <Label Text="Perfil" TextColor="#FFFFFF" HorizontalOptions="CenterAndExpand"></Label>
+                <StackLayout BackgroundColor="Transparent" Orientation="Horizontal" Padding="0,24,0,24" HorizontalOptions="StartAndExpand">
+                    <Image Source="drawable/ImagemPerfil.png"></Image>
+                    <StackLayout BackgroundColor="Transparent" Orientation="Vertical" Padding="16,0,0,0" VerticalOptions="CenterAndExpand">
+                        <Label TextColor="#FFFFFF" Text="(Conteudo nomeUsuario)" FontSize="14" VerticalOptions="Center" x:Name="nomeUsuario"/>
+                        <Label TextColor="{StaticResource Secundaria01}" Text="Trocar avatar" FontSize="10" VerticalOptions="Center"  />
+                    </StackLayout>
+                </StackLayout>
+                <Frame Padding="0,1,0,0" BackgroundColor="#CACACA">
+                    <Frame Background="{StaticResource Primaria03}" Padding="0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="BtnPagamentos" Tapped="BtnPagamentos_Tapped"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Image HorizontalOptions="Start" Source="drawable/creditCard.png"></Image>
+                            <StackLayout Padding="16,0,0,0">
+                                <Label Text="Pagamentos" TextColor="#FFFFFF" FontSize="16" Padding="0,16,0,0"></Label>
+                                <Label Text="Cartões salvos" TextColor="#FFFFFF" FontSize="10" Padding="0,0,0,16"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+                <Frame Padding="0,1,0,0" BackgroundColor="#CACACA">
+                    <Frame Background="{StaticResource Primaria03}" Padding="0">
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Image HorizontalOptions="Start" Source="drawable/mapOrange.png"></Image>
+                            <StackLayout Padding="16,0,0,0">
+                                <Label Text="Endereços" TextColor="#FFFFFF" FontSize="16" Padding="0,16,0,0"></Label>
+                                <Label Text="Meus endereços de entrega" TextColor="#FFFFFF" FontSize="10" Padding="0,0,0,16"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+                <Frame Padding="0,1,0,0" BackgroundColor="#CACACA">
+                    <Frame Background="{StaticResource Primaria03}" Padding="0">
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Image HorizontalOptions="Start" Source="drawable/user.png"></Image>
+                            <StackLayout Padding="16,0,0,0">
+                                <Label Text="Informações pessoais" TextColor="#FFFFFF" FontSize="16" Padding="0,16,0,0"></Label>
+                                <Label Text="Nome completo, RG e CPF" TextColor="#FFFFFF" FontSize="10" Padding="0,0,0,16"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+                <Frame Padding="0,1,0,0" BackgroundColor="#CACACA">
+                    <Frame Background="{StaticResource Primaria03}" Padding="0">
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Image HorizontalOptions="Start" Source="drawable/phone.png"></Image>
+                            <StackLayout Padding="16,0,0,0">
+                                <Label Text="Contato" TextColor="#FFFFFF" FontSize="16" Padding="0,16,0,0"></Label>
+                                <Label Text="E-mail e telefone de contato" TextColor="#FFFFFF" FontSize="10" Padding="0,0,0,16"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+                <Frame Padding="0,1,0,0" BackgroundColor="#CACACA">
+                    <Frame Background="{StaticResource Primaria03}" Padding="0">
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Image HorizontalOptions="Start" Source="drawable/lockOrange.png"></Image>
+                            <StackLayout Padding="16,0,0,0">
+                                <Label Text="Dados de acesso" TextColor="#FFFFFF" FontSize="16" Padding="0,16,0,0"></Label>
+                                <Label Text="Login e senha" TextColor="#FFFFFF" FontSize="10" Padding="0,0,0,16"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+                <Frame Padding="0,24,0,0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                    <Button Text="Voltar" Clicked="BtnRetornar_Clicked"  x:Name="BtnRetornar" CornerRadius="8" Style="{StaticResource BotaoVoltar}" />
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

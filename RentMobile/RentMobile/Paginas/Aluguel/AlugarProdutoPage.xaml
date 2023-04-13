@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.AlugarProdutoPage"
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="{StaticResource Primaria03}" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="32,64">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0,0,0,24">
+                    <ImageButton x:Name="btnMenuCustom" HorizontalOptions="StartAndExpand" Source="drawable/hamburguer.png" BackgroundColor="Transparent"></ImageButton>
+                    <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+                        <Button BackgroundColor="Transparent" TextColor="{StaticResource Secundaria01}" BorderColor="{StaticResource Secundaria01}" BorderWidth="1" CornerRadius="8" Text="Categoria" ></Button>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Vertical">
+                    <Image VerticalOptions="Fill" HorizontalOptions="Fill" Source="drawable/InserirImagem.png" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <StackLayout Spacing="8" Orientation="Horizontal" HorizontalOptions="Center">
+                        <Image x:Name="Elipse1"></Image>
+                        <Image x:Name="Elipse2"></Image>
+                        <Image x:Name="Elipse3"></Image>
+                        <Image x:Name="Elipse4"></Image>
+                        <Image x:Name="Elipse5"></Image>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

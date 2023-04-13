@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.App">
+    <Application.Resources>
+
+        <!-- Colors -->
+        <Color x:Key="Primaria01">#071F41</Color>
+        <Color x:Key="Primaria02">#123567</Color>
+        <Color x:Key="Primaria03">#03142D</Color>
+
+        <Color x:Key="Secundaria01">#F5A119</Color>
+        <Color x:Key="Secundaria02">#E7BD77</Color>
+        <Color x:Key="Secundaria03">#986207</Color>
+
+        <Color x:Key="Tercearia01">#11AC4F</Color>
+        <Color x:Key="Tercearia02">#4CC27B</Color>
+        <Color x:Key="Tercearia03">#035A26</Color>
+
+        <Color x:Key="Quaternaria01">#BC4802</Color>
+        <Color x:Key="Quaternaria02">#E96720</Color>
+        <Color x:Key="Quaternaria03">#923F0D</Color>
+
+        <!--img gif-->
+        <Style x:Key="ImgGif" TargetType="Image">
+            <Setter Property="IsVisible" Value="False"/>
+            <Setter Property="AbsoluteLayout.LayoutBounds" Value="0.50,0.50,0.10,0.10"/>
+            <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+        </Style>
+
+        <!-- ActivityIndicator -->
+        <Style x:Key="ActivityIndicator" TargetType="ActivityIndicator">
+            <Setter Property="IsRunning" Value="False"/>
+            <Setter Property="AbsoluteLayout.LayoutBounds" Value="0.50,0.50,0.10,0.10"/>
+            <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+            <Setter Property="Color" Value="White"/>
+        </Style>
+        
+        <!-- Styles -->
+        <Style x:Key="LabelMensagem" TargetType="Label">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+
+        <!-- Entry -->
+        <Style x:Key="Entradas" TargetType="Entry">            
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="TextColor" Value="#FFFFFF"/>
+            <Setter Property="BackgroundColor" Value="#10D9D9D9"/>
+            <Setter Property="Margin" Value="12,16,12,16"/>
+        </Style>
+        
+        <!-- Button -->
+        <Style x:Key="Botao" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="BotaoTirarFoto" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Background" Value="#11AC4F"/>
+        </Style>
+
+        <Style x:Key="BotaoVoltar" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Padding" Value="12,16,12,16"/>
+            <Setter Property="BackgroundColor" Value="#A3A3A3"/>
+            <Setter Property="BorderRadius" Value="8"/>
+        </Style>
+
+        <Style x:Key="BotaoAvancar" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Padding" Value="12,16,12,16"/>
+            <Setter Property="BackgroundColor" Value="#F5A119"/>
+            <Setter Property="BorderRadius" Value="8"/>
+        </Style>
+
+        <Style x:Key="BotaoAdicionarCartao" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Padding" Value="12,16,12,16"/>
+            <Setter Property="BackgroundColor" Value="#986207"/>
+            <Setter Property="BorderRadius" Value="8"/>
+        </Style>
+
+        <Style x:Key="BotaoRemoverCartao" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Padding" Value="12,16,12,16"/>
+            <Setter Property="BackgroundColor" Value="#BC4802"/>
+            <Setter Property="BorderRadius" Value="8"/>
+        </Style>
+
+        <!-- Label-->
+        <Style x:Key="Body" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+        </Style>
+        <Style x:Key="BodySmall" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+        </Style>
+        
+        <!--Frame entry parao-->
+        <Style  x:Key="FrameEntryPadrao" TargetType="Frame">
+            <Setter Property="Padding" Value="16,0,0,0"/>
+            <Setter Property="HeightRequest" Value="41"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="IsClippedToBounds" Value="true"/>
+            <Setter Property="BorderColor" Value="{StaticResource Primaria02}"/>
+            <Setter Property="BackgroundColor" Value="#10D9D9D9"/>
+        </Style>
+        <!--
+        \\PlaceholderColor="#7FFFFFFF" TextColor="White" Opacity="1"-->
+        <Style x:Key="EntryPadrao" TargetType="Entry">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="PlaceholderColor" Value="#7FFFFFFF"/>
+            <Setter Property="Opacity" Value="1"/>
+        </Style>
+
+
+        <!--Frame Picker Padrão-->
+        
+        <Style x:Key="PickerPadrao" TargetType="Picker">
+            <Setter Property="TextColor" Value="#03142D"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <Style x:Key="PickerPadraoAzul" TargetType="Picker">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Inter"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="TitleColor" Value="#7FFFFFFF"/>
+        </Style>
+
+        <Style  x:Key="FrameEntryPiker" TargetType="Frame">
+            <Setter Property="Padding" Value="16,0,0,0"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="IsClippedToBounds" Value="true"/>
+            <Setter Property="BorderColor" Value="White"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+
+        </Style>
+
+
+    </Application.Resources>
+</Application>

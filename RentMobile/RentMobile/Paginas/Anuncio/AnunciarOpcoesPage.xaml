@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentMobile.AnunciarOpcoesPage"
+             BackgroundColor="{StaticResource Primaria03}">
+    <ContentPage.Content>
+        <StackLayout Spacing="50">
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Image Source="drawable/MeusAnuncios.png"></Image>
+        </StackLayout>
+        <StackLayout VerticalOptions="StartAndExpand">
+                <Image Source="drawable/CriarAnuncio.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MostraAnunciarNovo"/>
+                    </Image.GestureRecognizers>
+                </Image>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
